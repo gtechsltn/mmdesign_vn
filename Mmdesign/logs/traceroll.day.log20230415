@@ -1,0 +1,132 @@
+[MANH] 2023-04-15 16:21:37,845     76 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 16:21:37.844
+[MANH] 2023-04-15 16:27:35,410 357641 INFO  [60] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-15 16:27:35.410
+[MANH] 2023-04-15 16:27:37,031    113 INFO  [65] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 16:27:37.029
+[MANH] 2023-04-15 16:39:18,739 701820 ERROR [111] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Picture' was not found on controller 'Mmdesign.Controllers.ProjectController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-15 17:06:46,989     68 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 17:06:46.988
+[MANH] 2023-04-15 17:07:08,701  21780 ERROR [1] Mmdesign.MvcApplication.AddAdminUserIfNotExists() - System.Data.SqlClient.SqlException (0x80131904): Cannot drop database "nhmmdktu_db" because it is currently in use.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<>c.<NonQuery>b__4_0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass57_0.<DropDatabase>b__0(DbConnection conn)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass60_0.<UsingConnection>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass2_0.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DropDatabase(SqlConnection sqlConnection, Nullable`1 commandTimeout, String databaseName)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DbDeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Common.DbProviderServices.DeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Objects.ObjectContext.DeleteDatabase()
+   at System.Data.Entity.Internal.DatabaseOperations.Delete(ObjectContext objectContext)
+   at System.Data.Entity.Database.Delete()
+   at System.Data.Entity.DropCreateDatabaseIfModelChanges`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass66_0`1.<CreateInitializationAction>b__0()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<>c.<InitializeDatabase>b__58_0(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mmdesign.Helpers.CustomMembership.GetUser(String username, Boolean userIsOnline) in D:\MMDESIGN\Mmdesign\Mmdesign\Helpers\CustomMembership.cs:line 151
+   at Mmdesign.MvcApplication.AddAdminUserIfNotExists() in D:\MMDESIGN\Mmdesign\Mmdesign\Global.asax.cs:line 106
+ClientConnectionId:81e1feb7-7099-42af-aa31-ccd0a5c7a45d
+Error Number:3702,State:4,Class:16
+[MANH] 2023-04-15 17:16:21,787     59 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 17:16:21.786
+[MANH] 2023-04-15 17:16:56,023  34295 ERROR [5] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Picture' was not found on controller 'Mmdesign.Controllers.ProjectController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-15 17:18:50,996     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 17:18:50.995
+[MANH] 2023-04-15 17:19:20,681     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 17:19:20.680
+[MANH] 2023-04-15 17:25:50,395 389775 ERROR [8] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): The controller for path '/assets/images/parallax1.jpg"' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-15 18:26:18,890     66 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 18:26:18.889
+[MANH] 2023-04-15 18:29:19,696     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 18:29:19.694
+[MANH] 2023-04-15 19:09:41,960     56 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 19:09:41.959
+[MANH] 2023-04-15 19:11:51,084     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 19:11:51.083
+[MANH] 2023-04-15 19:12:40,769     59 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 19:12:40.768
+[MANH] 2023-04-15 19:14:14,256     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 19:14:14.255
+[MANH] 2023-04-15 19:15:54,011     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 19:15:54.010
+[MANH] 2023-04-15 19:19:43,151     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 19:19:43.150
+[MANH] 2023-04-15 20:39:23,223     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 20:39:23.222
+[MANH] 2023-04-15 20:40:14,763     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 20:40:14.762
+[MANH] 2023-04-15 20:47:49,285    116 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 20:47:49.284
+[MANH] 2023-04-15 20:52:15,342     59 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 20:52:15.341
+[MANH] 2023-04-15 20:54:02,678     56 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 20:54:02.677
+[MANH] 2023-04-15 20:58:56,658     60 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 20:58:56.657
+[MANH] 2023-04-15 21:00:49,266     65 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 21:00:49.264
+[MANH] 2023-04-15 21:04:28,149     65 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-15 21:04:28.147
+[MANH] 2023-04-15 21:06:28,774 120690 ERROR [22] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'EditProjectImage' was not found on controller 'Mmdesign.Controllers.ProjectController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

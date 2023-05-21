@@ -1,0 +1,27 @@
+[MANH] 2023-04-22 12:09:20,915    135 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 12:09:20.915
+[MANH] 2023-04-22 12:09:27,350   6571 INFO  [7] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-22 12:19:14,638     55 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 12:19:14.637
+[MANH] 2023-04-22 12:19:24,519   9935 INFO  [8] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-22 12:25:05,494 350910 INFO  [56] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-22 12:25:05.493
+[MANH] 2023-04-22 12:25:21,256     29 INFO  [57] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 12:25:21.255
+[MANH] 2023-04-22 12:50:46,441 1525214 INFO  [130] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-22 12:50:46.441
+[MANH] 2023-04-22 12:50:52,860     59 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 12:50:52.859
+[MANH] 2023-04-22 12:53:40,557     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 12:53:40.556
+[MANH] 2023-04-22 12:58:46,425     66 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 12:58:46.424
+[MANH] 2023-04-22 13:00:48,902     67 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:00:48.901
+[MANH] 2023-04-22 13:02:52,844     69 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:02:52.843
+[MANH] 2023-04-22 13:04:13,049     58 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:04:13.048
+[MANH] 2023-04-22 13:06:39,522     54 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:06:39.522
+[MANH] 2023-04-22 13:09:23,640     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:09:23.639
+[MANH] 2023-04-22 13:28:04,546 1120969 INFO  [118] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-22 13:28:04.546
+[MANH] 2023-04-22 13:30:49,785     50 INFO  [131] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:30:49.784
+[MANH] 2023-04-22 13:53:08,081 1338346 INFO  [133] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-22 13:53:08.081
+[MANH] 2023-04-22 13:53:12,880     67 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:53:12.879
+[MANH] 2023-04-22 13:55:56,633     70 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 13:55:56.632
+[MANH] 2023-04-22 19:06:41,465    123 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:06:41.465
+[MANH] 2023-04-22 19:08:42,741     57 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:08:42.739
+[MANH] 2023-04-22 19:09:14,374     58 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:09:14.372
+[MANH] 2023-04-22 19:18:36,622     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:18:36.621
+[MANH] 2023-04-22 19:19:57,489     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:19:57.488
+[MANH] 2023-04-22 19:30:05,238     57 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:30:05.237
+[MANH] 2023-04-22 19:32:13,362    116 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-22 19:32:13.361

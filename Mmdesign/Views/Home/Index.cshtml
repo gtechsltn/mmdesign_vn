@@ -1,0 +1,813 @@
+﻿@model Mmdesign.Models.HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    ProjectModel prj01 = new ProjectModel();
+    ProjectModel prj02 = new ProjectModel();
+    ProjectModel prj03 = new ProjectModel();
+    ProjectModel prj04 = new ProjectModel();
+
+    if (Model.BestProjects != null)
+    {
+        try { prj01 = Model.BestProjects[0]; } catch { }
+        try { prj02 = Model.BestProjects[1]; } catch { }
+        try { prj03 = Model.BestProjects[2]; } catch { }
+        try { prj04 = Model.BestProjects[3]; } catch { }
+    }
+}
+
+<!--Section End Here-->
+<!--  Main Banner Start Here-->
+<div class="main-banner">
+    <div id="rev_slider_34_1_wrapper" class="rev_slider_wrapper" data-alias="news-gallery34">
+        <!-- START REVOLUTION SLIDER 5.0.7 fullwidth mode -->
+        <div id="rev_slider_34_1" class="rev_slider" data-version="5.0.7">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-index="rs-129">
+                    <!-- MAIN IMAGE -->
+                    <img src="@Url.Content($"~/{prj01.Picture}")" alt="" class="rev-slidebg">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption Newspaper-Title tp-resizeme "
+                         id="slide-129-layer-1"
+                         data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']"
+                         data-y="['top','top','top','center']" data-voffset="['165','135','105','0']"
+                         data-fontsize="['50','50','50','30']"
+                         data-lineheight="['55','55','55','35']"
+                         data-width="['600','600','600','420']"
+                         data-height="none"
+                         data-whitespace="normal"
+                         data-transform_idle="o:1;"
+                         data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                         data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                         data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                         data-start="1000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on">
+                        <div class="banner-text">
+                            <span class="sub-text">@Html.Raw(prj01.Seo)</span>
+                            <h2>@Html.Raw(prj01.Keyword)</h2>
+                            <p>
+                                @Html.Raw(prj01.ShortDesc)
+                            </p>
+                            <a class="btn-text" href="@Url.Action("Details", "Project", new { id = prj01.Id })"> Xem Thêm</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-130" data-title="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="@Url.Content($"~/{prj02.Picture}")" alt="" class="rev-slidebg">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme "
+                         id="slide-130-layer-1"
+                         data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']"
+                         data-y="['top','top','top','center']" data-voffset="['165','135','105','0']"
+                         data-fontsize="['50','50','50','30']"
+                         data-lineheight="['55','55','55','35']"
+                         data-width="['600','600','600','420']"
+                         data-height="none"
+                         data-whitespace="normal"
+                         data-transform_idle="o:1;"
+                         data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                         data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                         data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                         data-start="1000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on">
+                        <div class="banner-text">
+                            <span class="sub-text">@Html.Raw(prj02.Seo)</span>
+                            <h2>@Html.Raw(prj02.Keyword)</h2>
+                            <p>
+                                @Html.Raw(prj02.ShortDesc)
+                            </p>
+                            <a class="btn-text" href="@Url.Action("Details", "Project", new { id = prj02.Id })"> Xem Thêm</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-131">
+                    <!-- MAIN IMAGE -->
+                    <img src="@Url.Content($"~/{prj03.Picture}")" alt="" class="rev-slidebg ">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme "
+                         id="slide-131-layer-1"
+                         data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']"
+                         data-y="['top','top','top','center']" data-voffset="['165','135','105','0']"
+                         data-fontsize="['50','50','50','30']"
+                         data-lineheight="['55','55','55','35']"
+                         data-width="['600','600','600','420']"
+                         data-height="none"
+                         data-whitespace="normal"
+                         data-transform_idle="o:1;"
+                         data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                         data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                         data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                         data-start="1000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on">
+                        <div class="banner-text">
+                            <span class="sub-text">@Html.Raw(prj03.Seo)</span>
+                            <h2>@Html.Raw(prj03.Keyword)</h2>
+                            <p>
+                                @Html.Raw(prj03.ShortDesc)
+                            </p>
+                            <a class="btn-text" href="@Url.Action("Details", "Project", new { id = prj03.Id })"> Xem Thêm</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-132">
+                    <!-- MAIN IMAGE -->
+                    <img src="@Url.Content($"~/{prj04.Picture}")" alt="" class="rev-slidebg ">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption Newspaper-Title   tp-resizeme "
+                         id="slide-132-layer-1"
+                         data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']"
+                         data-y="['top','top','top','center']" data-voffset="['165','135','105','0']"
+                         data-fontsize="['50','50','50','30']"
+                         data-lineheight="['55','55','55','35']"
+                         data-width="['600','600','600','420']"
+                         data-height="none"
+                         data-whitespace="normal"
+                         data-transform_idle="o:1;"
+                         data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                         data-transform_out="auto:auto;s:1000;e:Power3.easeInOut;"
+                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                         data-mask_out="x:0;y:0;s:inherit;e:inherit;"
+                         data-start="1000"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-responsive_offset="on">
+                        <div class="banner-text">
+                            <span class="sub-text">@Html.Raw(prj04.Seo)</span>
+                            <h2>@Html.Raw(prj04.Keyword)</h2>
+                            <p>
+                                @Html.Raw(prj04.ShortDesc)
+                            </p>
+                            <a class="btn-text" href="@Url.Action("Details", "Project", new { id = prj04.Id })"> Xem Thêm</a>
+                        </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+            </ul>
+            <div class="tp-bannertimer tp-bottom"></div>
+        </div>
+    </div>
+</div>
+<!--  Main Banner End Here-->
+<!-- About Us-->
+<div class="about_section padding ptb-xs-60 gray_bg-color">
+    <div class="container">
+        <div class="row pb-30 text-center">
+            <div class="col-md-12 mb-20">
+                <h2><span>Our</span> Features</h2>
+                <span class="b-line"></span>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Features card 1 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-30">
+                <div class="card-features">
+                    <img src="@Url.Content("~/assets/images/living_room.png")" alt="icon">
+                    <h3 class="bold">Living Room Better</h3>
+                    <p class="light thin">Dolor sit Mollitia harum ea ut eaque velit.</p>
+                </div>
+            </div>
+            <!-- Features card 2 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-30">
+                <div class="card-features">
+                    <img src="@Url.Content("~/assets/images/office_furniture.png")" alt="icon">
+                    <h3 class="bold">Office Furniture</h3>
+                    <p class="light thin">Dolor sit Mollitia harum ea ut eaque velit.</p>
+                </div>
+            </div>
+            <!-- Features card 3 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-30">
+                <div class="card-features">
+                    <img src="@Url.Content("~/assets/images/dedicated_interior.png")" alt="icon">
+                    <h3 class="bold">Dedicated Interior</h3>
+                    <p class="light thin">Dolor sit Mollitia harum ea ut eaque velit.</p>
+                </div>
+            </div>
+            <!-- Features card 4 -->
+            <div class="col-12 col-md-6 col-lg-3 mb-30">
+                <div class="card-features">
+                    <img src="@Url.Content("~/assets/images/waiting_room.png")" alt="icon">
+                    <h3 class="bold">Waiting Room Design</h3>
+                    <p class="light thin">Dolor sit Mollitia harum ea ut eaque velit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Section -->
+<!--planing wrapper start-->
+<section class="plaing_wrap__block padding ptb-xs-60">
+    <div class="container">
+        <div class="row pb-30 text-center">
+            <div class="col-md-12 mb-20">
+                <h2><span>Our</span> Services</h2>
+                <span class="b-line"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="single_plan__block plane_bg__block bg_service1 mb-30">
+                    <div class="plan-content-box">
+                        <h3>Residential Design</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aquis
+                        </p>
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single_plan__block plane_bg__block bg_service2 mb-30">
+                    <div class="plan-content-box">
+                        <h3>Commercial Design</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aquis
+                        </p>
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single_plan__block plane_bg__block bg_service3 mb-xs-30 mb-sm-30">
+                    <div class="plan-content-box">
+                        <h3>Corporate Design</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aquis
+                        </p>
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single_plan__block bg_service4 plane_bg__block">
+                    <div class="plan-content-box">
+                        <h3>Hospitality Design</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aquis
+                        </p>
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--planing wrapper end-->
+<!--Our Progress Start-->
+<section class="progress_wrap__block padding ptb-xs-60 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section_title__block text-center mb-30">
+                    <h2><span>Our</span> Process</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="single_progress__block mt-30">
+                    <span>01</span>
+                    <h4>Design</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, coctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single_progress__block mt-30">
+                    <span>02</span>
+                    <h4>Preparation</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, coctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single_progress__block mt-30">
+                    <span>03</span>
+                    <h4>Construction</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, coctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="single_progress__block mt-30">
+                    <span>04</span>
+                    <h4>Revision</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, coctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Our Progress End-->
+<!--Quote and support section-->
+<section class="quote_wrap__block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 no-padding d-flex">
+                <div class="left_quote__block pb-80">
+                    <div class="left_box_heading__block block_bg pt-80 pt-xs-0">
+                        <h2>Why People Choose Us</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aquis
+                        </p>
+                    </div>
+                    <div class="single_quote__block block_bg">
+                        <i class="fa fa-tachometer"></i>
+                        <h4>Fast Approval</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        </p>
+                    </div>
+                    <div class="single_quote__block block_bg">
+                        <i class="fa fa-group"></i>
+                        <h4>Dedicared Team</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        </p>
+                    </div>
+                    <div class="single_quote__block block_bg">
+                        <i class="fa fa-phone-square"></i>
+                        <h4>24/7 Supports</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-6 no-padding">
+                <div class="quote__block ptb-80 ptb-xs-60">
+                    <h2> Free Consultation</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    </p>
+                    <form action="index1.html">
+                        <input type="text" id="name" placeholder="Your Name*">
+                        <input type="text" id="email" placeholder="Email Address*">
+                        <input type="text" id="category" placeholder="Discus About*">
+                        <textarea id="msg" cols="30" rows="10" placeholder="Consultation..."></textarea>
+                        <input type="submit" id="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Quote and support section end-->
+<!-- Work Section -->
+<section id="work" class="padding ptb-xs-60 gray-bg">
+    <div class="container">
+        <div class="row pb-30 text-center">
+            <div class="col-sm-12 mb-20">
+                <h2><span>Our</span> Work</h2>
+                <span class="b-line"></span>
+            </div>
+        </div>
+        <!-- work Filter -->
+        <div class="row">
+            <ul class="container-filter categories-filter">
+                <li>
+                    <a class="categories active" data-filter="*">All</a>
+                </li>
+                <li>
+                    <a class="categories" data-filter=".branding">Branding</a>
+                </li>
+                <li>
+                    <a class="categories" data-filter=".design">Design</a>
+                </li>
+                <li>
+                    <a class="categories" data-filter=".photo">Photo</a>
+                </li>
+                <li>
+                    <a class="categories" data-filter=".coffee">coffee</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End work Filter -->
+        <div class="row container-masonry_demo nf-col-45">
+            <div class="card-columns">
+
+                <div class="card nf-item w2x branding coffee spacing">
+                    <div class="item-box">
+                        <a href="@Url.Content("~/assets/images/portfolio3/1.jpg")" class="fancylight" data-fancybox-group="light"> <img alt="1" src="@Url.Content("~/assets/images/portfolio3/1.jpg")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/portfolio3/1.jpg")" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card nf-item grid-sizer photo spacing">
+                    <div class="item-box">
+                        <a> <img alt="1" src="@Url.Content("~/assets/images/portfolio3/2.jpg")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/portfolio3/2.jpg")" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card nf-item branding photo spacing">
+                    <div class="item-box">
+                        <a> <img alt="1" src="@Url.Content("~/assets/images/portfolio3/3.jpg")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/portfolio3/3.jpg")" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card nf-item design spacing">
+                    <div class="item-box">
+                        <a> <img alt="1" src="@Url.Content("~/assets/images/portfolio3/4.jpg")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/portfolio3/4.jpg")" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card nf-item photo spacing">
+                    <div class="item-box">
+                        <a> <img alt="1" src="@Url.Content("~/assets/images/portfolio3/5.jpg")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/portfolio3/5.jpg")" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="card nf-item branding photo spacing">
+                    <div class="item-box">
+                        <a> <img alt="1" src="@Url.Content("~/assets/images/portfolio3/3.jpg")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/portfolio3/3.jpg")" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Contact-->
+<section class="padding team__block-section ptb-xs-60">
+    <div class="container">
+        <div class="row pb-30 text-center">
+            <div class="col-md-12 mb-20">
+                <h2><span>Our</span> Team</h2>
+                <span class="b-line"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="team-pagination owl-carousel" data-pagination="true" data-items="3" data-loop="true" data-margin="10" data-center="false" data-navigation="false" data-desktop="3" data-desktopsmall="3" data-tablet="2" data-mobile="1" data-autoplay="true" data-autotime="2000" data-autoplayHoverPause="true">
+
+                    <!--Team Member-->
+                    <div class="team-member">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team1.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            Sales Manager
+                                        </div>
+                                        <h4>Tommy Wood</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team2.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            Senior Desig
+                                        </div>
+                                        <h4>Danny Burton</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team3.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            UX Specialist
+                                        </div>
+                                        <h4>Melody Clark</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="inner-box wow fadeInUp animated">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team4.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            Art Director
+                                        </div>
+                                        <h4>Elizabeth Jones</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Team Member-->
+                    <div class="team-member">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team1.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            Sales Manager
+                                        </div>
+                                        <h4>Tommy Wood</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team2.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            Senior Desig
+                                        </div>
+                                        <h4>Danny Burton</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team3.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            UX Specialist
+                                        </div>
+                                        <h4>Melody Clark</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="inner-box wow fadeInUp animated">
+                            <div class="image-box">
+                                <img src="@Url.Content("~/assets/images/team/team4.jpg")" alt="">
+                                <!--Overlay Box-->
+                                <div class="overlay-box">
+                                    <!--User Info-->
+                                    <div class="user-info">
+                                        <div class="text">
+                                            Art Director
+                                        </div>
+                                        <h4>Elizabeth Jones</h4>
+                                    </div>
+                                    <!--Social Icon Two-->
+                                    <ul class="social-icon-two">
+                                        <li>
+                                            <a href="#"><span class="fa fa-facebook"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-twitter"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="fa fa-google-plus"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--Availablity Section start-->
+<section class="available_wrap__block">
+    <div class="available_content__block text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2>We Are Available Worldwide</h2>
+                    <p>
+                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                        adipisci velit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Availablity Section end-->
+<!--blog start-->
+<section class="latest__block padding ptb-xs-60">
+    <div class="container">
+        <div class="row pb-30 text-center">
+            <div class="col-md-12 mb-20">
+                <h2><span>Latest</span> News</h2>
+                <span class="b-line"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="@Url.Content("~/assets/images/blog/blog-img1.jpg")" alt="">
+                <div class="latest__block-post">
+                    <div class="meta-post">
+                        Dec, 24th 2018
+                    </div>
+                    <h3 class="latest__block-title"><a href="blog-single.html">How To Decorate With Black-and-White?</a></h3>
+
+                    <div class="flat-link flat-arrow sm  ">
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="@Url.Content("~/assets/images/blog/blog-img2.jpg")" alt="">
+                <div class="latest__block-post">
+                    <div class="meta-post">
+                        Dec, 24th 2018
+                    </div>
+                    <h3 class="latest__block-title"><a href="blog-single.html">How To Decorate With Black-and-White?</a></h3>
+
+                    <div class="flat-link flat-arrow sm  ">
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="@Url.Content("~/assets/images/blog/blog-img3.jpg")" alt="">
+                <div class="latest__block-post">
+                    <div class="meta-post">
+                        Dec, 24th 2018
+                    </div>
+                    <h3 class="latest__block-title"><a href="blog-single.html">How To Decorate With Black-and-White?</a></h3>
+
+                    <div class="flat-link flat-arrow sm  ">
+                        <a href="#" class="more_btn__block">Thêm <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--blog end-->

@@ -1,0 +1,118 @@
+/*
+============== background Color====================
+*/
+.btn-text,
+.dark-bg,
+.hover-bg:hover,
+figure.effect-zoe figcaption,
+.menu:after,
+.top-bar-section,
+.icons-hover-black i:hover,
+.footer-style-2:before,
+.main-banner .more-btn,
+.tparrows.tp-leftarrow:hover,
+.tparrows.tp-rightarrow:hover,
+.overlay-before:before,
+#testimonial .client-pic,
+.pagination-nav ul li.active a,
+.pagination-nav ul li:hover a,
+.sidebar-widget .widget-tag li a:hover,
+.item-nav .item-prev .prev-btn,
+.item-nav .item-next .next-btn,
+.item-nav .item-prev:hover .prev-btn,
+.item-nav .item-next:hover .next-btn,
+.faq .collape-plus,
+.blog-post .post-more-link:hover .btn-color-line,
+.blog-date,
+.ui-input-group .input-bar:before,
+.ui-input-group .input-bar:after,
+.ui-input-group .input-bar:before,
+.ui-input-group .input-bar:after,
+.newsletter .newsletter-btn,
+#preloader,
+.btn-text,
+.nf-carousel-theme .owl-controls .owl-nav .owl-prev,
+.nf-carousel-theme .owl-controls .owl-nav .owl-next,
+#testimonial .owl-dot.active,
+.line-btn:hover,
+.line-btn.active {
+  background: #8e8007;
+}
+
+.top-btn:hover,
+.header-1 .icons-hover-black i:hover {
+  background: #5d5405;
+}
+
+.ui-timeline .tl-item .tl-body .tl-entry .btn-primary {
+  background-color: #8e8007 !important;
+  border-color: #8e8007 !important;
+}
+
+.page-signin .body-inner:before {
+  background-color: #8e8007;
+}
+
+/*
+============== Text Color====================
+*/
+.color,
+.btn-text:hover,
+.top-social-icon a.btn:hover,
+.header-2 .top-bar-section.top-bar-bg-color a:hover,
+.call-us ul li a:hover,
+.star i,
+.pagination-nav ul li a,
+.sidebar-widget ul li a:hover,
+.widget-tag li a,
+.item-nav .item-prev .prev-btn,
+.item-nav .item-next .next-btn,
+.big-font i,
+.post-meta span > a > i,
+.lead-point li,
+.blog-post .fa-tag,
+.color-primary,
+a.color-primary,
+.ui-input-group > input:focus ~ label,
+.ui-input-group > textarea:focus ~ label,
+.custom-check:before,
+.contact .icon-circle,
+.mapmarker .ion-ios-location,
+.chooose-box strong i,
+.color,
+.single-sidebar-widget .special-links li:hover a,
+.single-sidebar-widget .special-links li a.active,
+.single-sidebar-widget .special-links li a.active:after {
+  color: #8e8007;
+}
+
+.widget-tag li a {
+  color: #8e8007 !important;
+}
+
+/*
+============== Border Color====================
+*/
+.btn-text,
+.v-line,
+.menu,
+.tparrows.tp-leftarrow:hover,
+.tparrows.tp-rightarrow:hover,
+.pagination-nav ul li a,
+.widget-search input[type="text"]:focus,
+.blog-post-hr input[type="text"]:focus,
+.blog-post-hr textarea:focus,
+.widget-tag li a,
+.client-avtar,
+.custom-check,
+.contact-form input[type="text"]:focus,
+.contact-form textarea:focus,
+.contact .icon-circle,
+.btn-text,
+#testimonial .client-pic,
+#testimonial .owl-dot,
+.single-sidebar-widget .special-links li a:before,
+.line-btn:hover,
+.line-btn.active {
+  border-color: #8e8007;
+}

@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "Quản lý dự án";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    string adminUser = "bạn";
+    if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        CustomPrincipal identity = HttpContext.Current.User as CustomPrincipal;
+        if (identity != null)
+        {
+            adminUser = identity.UserName;
+        }
+    }
+}
+
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+<link href="@Url.Content("~/assets/js/datatables/jquery.dataTables.min.css")" rel="stylesheet" />
+
+<style>
+    #btnProjectAdd {
+        margin: 10px 0px;
+    }
+
+    div#DataTables_Table_0_wrapper {
+        width: 100% !important;
+    }
+</style>
+
+<script src="@Url.Content("~/assets/js/jquery-1.12.4.min.js")"></script>
+<script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+<script src="@Url.Content("~/assets/js/datatables/jquery.dataTables.min.js")"></script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <button id="btnProjectAdd" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Thêm mới dự án
+            </button>
+        </div>
+        <div class="col-md-12">
+            <table id="myTable" class="table table-responsive table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>SEO</th>
+                        <th>Từ khóa</th>
+                        <th>Tiêu đề</th>
+                        <th>Mô tả ngắn gọn</th>
+                        <th>Nhà đầu tư</th>
+                        <th>Địa chỉ</th>
+                        <th>Hoạt động</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var myTable = $("#myTable").DataTable({
+            "processing": true,
+            "serverSide": true,
+            "filter": true,
+            "destroy": true,
+            "autoWidth": true,
+            "responsive": true,
+            "searching": true,
+            "ajax": {
+                "url": "@Url.Action("LoadProjects", "Project")",
+                "type": "POST",
+                "datatype": "json"
+            },
+            "drawCallback": function (settings) {
+                $('th').css("color", "black");
+                $('th').css("border-bottom", "none");
+                $('th:last').css("width", "48px");
+            },
+            "initComplete": function (settings, json) {
+                var $searchInput = $('div.dataTables_filter input');
+                $searchInput.unbind();
+                $searchInput.bind('keyup', function (e) {
+                    if (this.value === '') {
+                        myTable.search('').draw();
+                    }
+                    if (this.value.length >= 1) {
+                        myTable.search(this.value).draw();
+                    }
+                });
+            },
+            "columns": [
+                { "data": "Id", "name": "Id", "autoWidth": true },
+                { "data": "Name", "name": "Name", "autoWidth": true },
+                { "data": "Seo", "name": "Seo", "autoWidth": true },
+                { "data": "Keyword", "name": "Keyword", "autoWidth": true },
+                { "data": "Title", "name": "Title", "autoWidth": true },
+                { "data": "ShortDesc", "name": "ShortDesc", "autoWidth": true },
+                { "data": "Investor", "name": "Investor", "autoWidth": true },
+                { "data": "Address", "name": "Address", "autoWidth": true },
+                {
+                    data: null,
+                    searchable: false,
+                    sortable: false,
+                    orderable: false, //
+                    "mRender": function (data, type, row) {
+                        return '<div class="responsive"><a href="#" class="details" data-id="' + row["Id"] + '"><i class="glyphicon glyphicon-eye-open"></i></a> <a href="#" class="picture" data-id="' + row["Id"] + '"><i class="glyphicon glyphicon-picture"></i></a> <a href="#" class="edit" data-id="' + row["Id"] + '"><i class="glyphicon glyphicon-edit"></i></a> <a href="#" class="delete" data-id="' + row["Id"] + '"><i class="glyphicon glyphicon-trash"></i></a></div>';
+                    }
+                }
+            ],
+            "columnDefs": [
+                { width: '5%', targets: 0 },
+                { width: '20%', targets: 5 },
+                { width: '10%', targets: 8 }
+            ],
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "language": {
+                "url": "@Url.Content("~/assets/js/datatables/vi.json")"
+            }
+        });
+    });
+
+    $(document).on('click', '.details', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        let href = '@Url.Action("Details", "Project")'  + '/' + id;
+        window.location.href = href;
+    });
+
+    $(document).on('click', '.picture', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        let href = '@Url.Action("Picture", "Project")'  + '/' + id;
+        window.location.href = href;
+    });
+
+    $(document).on('click', '.edit', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        let href = '@Url.Action("Edit", "Project")'  + '/' + id;
+        window.location.href = href;
+    });
+
+    $(document).on('click', '.delete', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        let href = '@Url.Action("Delete", "Project")' + '/' + id;
+        let isAgree = confirm('Bạn có chắc chắn muốn xóa?');
+        if (isAgree) {
+            window.location.href = href;
+        }
+    });
+
+    $(document).on('click', "#btnProjectAdd", function (e) {
+        e.preventDefault();
+        let href = '@Url.Action("Create", "Project")';
+        window.location.href = href;
+    });
+</script>

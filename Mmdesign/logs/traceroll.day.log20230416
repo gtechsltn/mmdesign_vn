@@ -1,0 +1,566 @@
+[MANH] 2023-04-16 12:03:44,331    155 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 12:03:44.330
+[MANH] 2023-04-16 12:16:48,884     65 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 12:16:48.883
+[MANH] 2023-04-16 12:16:51,448   2628 ERROR [1] Mmdesign.MvcApplication.AddAdminUserIfNotExists() - System.Data.Entity.Migrations.Infrastructure.AutomaticMigrationsDisabledException: Unable to update database to match the current model because there are pending changes and automatic migration is disabled. Either write the pending model changes to a code-based migration or enable automatic migration. Set DbMigrationsConfiguration.AutomaticMigrationsEnabled to true to enable automatic migration.
+   at System.Data.Entity.Migrations.DbMigrator.Upgrade(IEnumerable`1 pendingMigrations, String targetMigrationId, String lastMigrationId)
+   at System.Data.Entity.Migrations.DbMigrator.UpdateInternal(String targetMigration)
+   at System.Data.Entity.Migrations.DbMigrator.<>c__DisplayClass42_0.<Update>b__0()
+   at System.Data.Entity.Migrations.DbMigrator.EnsureDatabaseExists(Action mustSucceedToKeepDatabase)
+   at System.Data.Entity.Migrations.DbMigrator.Update(String targetMigration)
+   at System.Data.Entity.Internal.DatabaseCreator.CreateDatabase(InternalContext internalContext, Func`3 createMigrator, ObjectContext objectContext)
+   at System.Data.Entity.Internal.InternalContext.CreateDatabase(ObjectContext objectContext, DatabaseExistenceState existenceState)
+   at System.Data.Entity.Database.Create(DatabaseExistenceState existenceState)
+   at System.Data.Entity.DropCreateDatabaseIfModelChanges`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClass66_0`1.<CreateInitializationAction>b__0()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<>c.<InitializeDatabase>b__58_0(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.Initialize()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Mmdesign.Helpers.CustomMembership.GetUser(String username, Boolean userIsOnline) in D:\MMDESIGN\Mmdesign\Mmdesign\Helpers\CustomMembership.cs:line 151
+   at Mmdesign.MvcApplication.AddAdminUserIfNotExists() in D:\MMDESIGN\Mmdesign\Mmdesign\Global.asax.cs:line 106
+[MANH] 2023-04-16 12:17:54,094     67 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 12:17:54.093
+[MANH] 2023-04-16 12:19:46,157     68 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 12:19:46.156
+[MANH] 2023-04-16 12:20:13,064  26975 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): The controller for path '/Category/Manage' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 12:37:14,784     82 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 12:37:14.783
+[MANH] 2023-04-16 12:37:21,446   6744 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 12:58:31,454     58 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 12:58:31.453
+[MANH] 2023-04-16 12:58:51,248  19852 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:03:23,711 292315 INFO  [13] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:03:37,625 306229 INFO  [9] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:04:20,058 348662 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:07:41,262 549866 INFO  [15] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:08:36,935 605539 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:08:49,667 618271 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:09:34,958 663562 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:09:51,589 680193 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:20:56,760     67 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 13:20:56.758
+[MANH] 2023-04-16 13:24:03,047 186354 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:26:39,461 342769 INFO  [11] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:28:11,839 435147 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:28:14,436 437744 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:29:00,902 484209 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:32:49,176     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 13:32:49.174
+[MANH] 2023-04-16 13:32:54,823   5708 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:34:47,596    118 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 13:34:47.594
+[MANH] 2023-04-16 13:34:54,346   6868 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:35:50,309  62831 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:35:51,117  63639 INFO  [9] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:35:51,746  64268 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:39:30,498 283020 INFO  [9] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:39:32,873 285395 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 13:39:35,937 288459 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:07:16,173 1948696 INFO  [79] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:11:11,143 2183665 INFO  [66] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:11:13,447 2185969 INFO  [66] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:11:13,938 2186460 INFO  [73] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:11:15,310 2187832 INFO  [66] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:11:31,806 2204328 INFO  [73] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:12:09,324 2241846 INFO  [79] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:22:50,556     70 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 14:22:50.555
+[MANH] 2023-04-16 14:23:29,609  39123 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:24:18,400  87915 INFO  [34] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:25:15,367 144881 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:26:57,392 246907 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:26:57,403 246918 INFO  [65] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:26:57,438 246953 INFO  [61] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:26:57,968 247482 INFO  [7] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-16 14:26:57.968
+[MANH] 2023-04-16 14:26:59,354    110 INFO  [41] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 14:26:59.353
+[MANH] 2023-04-16 14:27:47,894    123 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 14:27:47.892
+[MANH] 2023-04-16 14:27:53,191   5420 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:30:28,253    113 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 14:30:28.251
+[MANH] 2023-04-16 14:45:30,300 902160 INFO  [51] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 14:57:52,851     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 14:57:52.850
+[MANH] 2023-04-16 14:57:58,502   5713 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:03:55,301     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 15:03:55.300
+[MANH] 2023-04-16 15:04:15,156  19917 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:07:09,720     66 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 15:07:09.719
+[MANH] 2023-04-16 15:07:15,021   5367 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:11:09,885     71 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 15:11:09.883
+[MANH] 2023-04-16 15:11:15,207   5392 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:12:05,914  56099 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:14:00,323 170508 INFO  [18] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:14:01,442 171627 INFO  [9] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:14:27,774 197959 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:15:14,088 244274 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:07,245 297430 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:09,736 299922 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:24,204 314389 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:27,498 317683 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:27,682 317867 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:27,893 318078 INFO  [9] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:28,079 318264 INFO  [16] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:45,161 335346 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:16:47,109 337294 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:17:01,637 351822 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:17:36,709 386894 INFO  [14] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:17:42,710 392896 ERROR [13] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Delete' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 15:18:08,875 419060 ERROR [14] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Manage' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 15:18:14,079 424265 INFO  [14] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:18:28,948 439134 INFO  [14] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:18:29,893 440078 INFO  [18] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:19:20,459 490644 INFO  [14] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:20:24,703 554889 INFO  [14] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:20:25,496 555681 INFO  [18] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:32:25,860     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 15:32:25.859
+[MANH] 2023-04-16 15:32:33,038   7239 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:38:31,787     64 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 15:38:31.786
+[MANH] 2023-04-16 15:38:39,316   7593 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:38:57,138  25415 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:40:59,807 148083 INFO  [23] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:41:01,172 149448 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:41:03,701 151978 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:42:59,732 268009 INFO  [17] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:43:01,717 269994 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:43:41,443 309720 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:43:43,853 312129 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:43:45,647 313924 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:43:46,056 314333 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:45:12,651 400928 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:45:24,945 413222 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:46:49,625 497901 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:46:50,492 498769 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:47:12,124 520401 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:47:34,762 543039 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:48:04,272 572548 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:48:35,138 603415 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:48:39,794 608070 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:48:40,177 608454 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:49:07,667 635944 INFO  [6] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:49:26,012 654289 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:51:10,304 758581 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:51:11,066 759343 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:52:02,564 810840 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:52:06,484 814761 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:54:47,166 975443 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:54:50,005 978282 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:57:04,404 1112681 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:57:07,440 1115717 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:58:33,444 1201721 INFO  [59] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:58:36,063 1204340 INFO  [59] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:59:54,362 1282638 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:59:57,629 1285906 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:59:57,971 1286248 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 15:59:59,854 1288131 INFO  [43] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:00:06,262 1294538 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:01:08,592 1356869 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:01:10,571 1358848 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:01:12,724 1361000 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:01:14,093 1362370 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:01:14,382 1362659 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:01:52,306 1400582 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:02:05,980 1414256 INFO  [53] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-16 16:02:05.980
+[MANH] 2023-04-16 16:03:06,782    115 INFO  [91] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 16:03:06.781
+[MANH] 2023-04-16 16:03:08,543   1876 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:03:09,914   3247 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:03:11,897   5230 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:03:21,183  14516 INFO  [35] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:25,677 139010 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:27,444 140777 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:28,237 141570 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:28,416 141749 INFO  [34] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:28,582 141915 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:28,729 142062 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:28,871 142204 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:05:30,390 143723 INFO  [12] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:31,445 204778 INFO  [81] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:33,550 206883 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:33,867 207200 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:34,064 207397 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:34,196 207529 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:35,251 208584 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:35,519 208853 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:06:35,645 208978 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:47,433 280766 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:49,561 282894 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:49,926 283260 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:50,121 283454 INFO  [33] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:50,284 283617 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:59,034 292367 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:07:59,376 292709 INFO  [81] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:08:08,105 301438 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:08:41,296 334629 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:08:49,463 342796 INFO  [33] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:09:01,239 354572 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:09:20,988 374321 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:09:30,470 383803 INFO  [37] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:10:53,133 466466 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:11:02,979 476312 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:08,576 541909 INFO  [81] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:11,002 544335 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:12,288 545621 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:12,851 546184 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:16,248 549581 INFO  [86] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:33,803 567136 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:34,616 567949 INFO  [86] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:12:45,370 578703 INFO  [86] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:14:51,004 704337 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:14:53,907 707240 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:14:54,135 707468 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:14:54,316 707649 INFO  [140] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:15:26,354 739687 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:15:50,104 763438 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:16:24,544 797877 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:15,299 908632 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:16,031 909364 INFO  [86] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:17,358 910691 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:17,604 910937 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:19,346 912679 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:19,587 912920 INFO  [86] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:18:55,411 948744 INFO  [47] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-16 16:18:55.411
+[MANH] 2023-04-16 16:19:00,137    116 INFO  [31] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 16:19:00.136
+[MANH] 2023-04-16 16:19:01,250   1229 INFO  [30] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:22:10,580 190559 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:22:11,020 191000 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:22:11,347 191326 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:22:12,793 192773 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:22:13,066 193045 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:22:13,306 193285 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:24:54,882 354862 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:24:56,780 356759 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:24:57,117 357096 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:24:57,316 357295 INFO  [116] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:24:58,723 358702 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:25:05,803 365782 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:25:40,458 400437 INFO  [47] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:25:40,861 400840 INFO  [82] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:25:43,746 403725 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:25:44,021 404000 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:25:51,929 411908 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:26:53,046 473025 INFO  [82] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:26:58,745 478724 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:27:10,197 490176 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:27:27,115 507094 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:25,396 565375 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:28,763 568742 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:29,764 569743 INFO  [134] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:30,483 570463 INFO  [136] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:30,699 570679 INFO  [110] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:30,875 570854 INFO  [110] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:28:34,833 574812 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:29:39,891 639870 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:29:41,371 641350 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:29:55,181 655161 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:25,673 685653 INFO  [40] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:26,271 686250 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:26,498 686477 INFO  [116] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:26,987 686966 INFO  [116] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:27,187 687166 INFO  [116] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:27,376 687355 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:27,564 687544 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:27,741 687720 INFO  [125] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:30:27,896 687875 INFO  [125] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:38,439 758418 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:39,280 759259 INFO  [125] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:41,215 761194 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:41,414 761394 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:41,607 761586 INFO  [35] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:43,035 763014 INFO  [125] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:45,100 765079 INFO  [100] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:45,341 765320 INFO  [87] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:31:45,585 765564 INFO  [125] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:36:57,584 1077563 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:37:00,741 1080720 INFO  [104] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:37:01,720 1081699 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:37:06,377 1086356 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:37:16,722 1096701 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:38:28,778 1168758 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:38:29,136 1169115 INFO  [104] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:38:32,852 1172832 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:38:36,464 1176443 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:38:43,348 1183327 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:38:52,524 1192504 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:39:03,334 1203313 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:40:36,014 1295993 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:40:37,689 1297668 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:40:37,957 1297936 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:40:38,153 1298133 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:41:45,588 1365567 INFO  [20] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-16 16:41:45.588
+[MANH] 2023-04-16 16:41:50,696    124 INFO  [77] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 16:41:50.695
+[MANH] 2023-04-16 16:41:51,901   1329 INFO  [20] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:42:07,517  16945 INFO  [104] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:43:13,896  83324 INFO  [104] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:43:29,040  98469 INFO  [112] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:43:35,956 105384 INFO  [52] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:43:37,991 107419 INFO  [52] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:43:39,764 109193 INFO  [52] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:43:55,042 124471 ERROR [104] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Edit' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 16:46:16,845 266273 INFO  [112] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:46:56,369 305797 INFO  [112] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:47:24,740 334168 INFO  [136] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 16:48:02,412 371841 INFO  [112] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:48:48,076    138 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 17:48:48.075
+[MANH] 2023-04-16 17:48:55,351   7413 INFO  [10] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:49:18,916  30978 INFO  [7] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:52:07,549 199611 INFO  [10] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:52:20,494 212556 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:52:31,096 223158 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:52:48,865 240928 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:54:21,443 333505 INFO  [10] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:54:30,171 342233 INFO  [42] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:56:35,140 467203 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 17:58:13,853 565916 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:01:02,775 734837 INFO  [50] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:01:16,017 748079 INFO  [50] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:12,775 804838 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:16,859 808922 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:17,865 809927 INFO  [52] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:18,056 810118 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:18,218 810280 INFO  [49] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:20,033 812096 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:20,252 812314 INFO  [49] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:20,440 812502 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:20,606 812668 INFO  [74] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:20,761 812824 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:02:21,786 813848 INFO  [53] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:04:21,245 933308 INFO  [52] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:05:11,050 983113 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:05:13,362 985424 INFO  [41] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:05:14,718 986781 INFO  [52] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:08:02,038 1154100 INFO  [54] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:08:03,933 1155996 INFO  [54] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:08:04,136 1156198 INFO  [17] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:08:04,305 1156367 INFO  [54] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:08:04,442 1156505 INFO  [54] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:14,635 1226697 INFO  [54] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:17,386 1229448 INFO  [54] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:50,543 1262606 INFO  [62] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:52,977 1265040 INFO  [62] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:53,194 1265256 INFO  [65] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:53,351 1265413 INFO  [73] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:09:53,498 1265561 INFO  [85] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:10:07,615 1279677 INFO  [62] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:10:09,391 1281453 INFO  [62] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:10:09,610 1281673 INFO  [85] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:10:09,905 1281967 INFO  [85] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:10:10,091 1282153 INFO  [87] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:11:05,862     57 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 18:11:05.861
+[MANH] 2023-04-16 18:11:12,030   6225 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:11:15,146   9341 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:12:10,910  65105 INFO  [8] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:17:38,968 393163 INFO  [56] Mmdesign.Controllers.CategoryController.Index() - Category->Index
+[MANH] 2023-04-16 18:17:44,348 398543 INFO  [6] Mmdesign.Controllers.MenuController.Index() - Data Source=localhost;Initial Catalog=nhmmdktu_db;Integrated Security=True;MultipleActiveResultSets=True;
+[MANH] 2023-04-16 18:17:47,494 401689 INFO  [6] Mmdesign.Controllers.MenuController.Index() - Data Source=localhost;Initial Catalog=nhmmdktu_db;Integrated Security=True;MultipleActiveResultSets=True;
+[MANH] 2023-04-16 18:18:17,545 431741 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Manage' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 18:18:24,835 439030 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): The controller for path '/Article/Manage' was not found or does not implement IController.
+   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 18:21:33,638     59 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 18:21:33.638
+[MANH] 2023-04-16 18:21:35,430   1851 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Index' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 18:21:36,428   2849 ERROR [6] Mmdesign.MvcApplication.Application_Error() - 
+[MANH] 2023-04-16 18:21:41,684   8105 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Index' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 18:22:08,797     59 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 18:22:08.796
+[MANH] 2023-04-16 18:22:14,974   6236 INFO  [11] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:22:41,275  32537 ERROR [7] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Edit' was not found on controller 'Mmdesign.Controllers.CategoryController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-16 18:24:53,584    112 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 18:24:53.583
+[MANH] 2023-04-16 18:24:57,894   4423 INFO  [11] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:25:08,146  14675 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:27:50,163     60 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 18:27:50.162
+[MANH] 2023-04-16 18:28:02,612  12509 INFO  [7] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:29:16,484  86381 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:29:43,925 113822 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:31:06,156 196054 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:34:04,662 374559 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:34:06,731 376628 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:34:07,185 377082 INFO  [13] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:34:07,353 377251 INFO  [9] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:34:07,495 377392 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:34:09,196 379093 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:37:16,584 566482 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:37:25,799 575696 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:37:25,968 575865 INFO  [35] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:37:26,104 576001 INFO  [49] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:38:24,235 634132 INFO  [35] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:38:39,831 649728 INFO  [35] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:39:24,100 693997 INFO  [35] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:42:39,627 889524 INFO  [27] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:43:32,425 942322 INFO  [12] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:44:52,359 1022256 INFO  [11] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:45:36,676 1066573 INFO  [8] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:48:24,992 1234889 INFO  [8] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:48:31,438 1241335 INFO  [8] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:48:47,865 1257762 INFO  [74] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:49:16,273 1286170 INFO  [74] Mmdesign.MvcApplication.Application_End() - Application_Start finished at: 2023-04-16 18:49:16.273
+[MANH] 2023-04-16 18:59:17,851    118 INFO  [143] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 18:59:17.850
+[MANH] 2023-04-16 18:59:27,065   9332 INFO  [128] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 18:59:59,990  42257 INFO  [128] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 19:01:06,757 109024 INFO  [74] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 19:08:18,957    119 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 19:08:18.956
+[MANH] 2023-04-16 19:08:24,389   5551 INFO  [9] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 20:58:21,236    144 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 20:58:21.236
+[MANH] 2023-04-16 20:59:41,969    116 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 20:59:41.968
+[MANH] 2023-04-16 21:01:33,673    119 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 21:01:33.672
+[MANH] 2023-04-16 21:01:42,196   8643 INFO  [9] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:07:51,732    114 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 23:07:51.730
+[MANH] 2023-04-16 23:09:41,702 110084 INFO  [17] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:18:31,258    122 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 23:18:31.256
+[MANH] 2023-04-16 23:18:40,814   9678 INFO  [7] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:19:43,105  71968 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:19:46,783  75647 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:20:01,349  90213 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:21:19,197 168061 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:21:33,958 182822 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:21:58,038 206901 INFO  [9] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:24:08,137 337001 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:29:47,412    114 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 23:29:47.410
+[MANH] 2023-04-16 23:29:56,043   8745 INFO  [7] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:33:21,977    149 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 23:33:21.974
+[MANH] 2023-04-16 23:33:30,871   9044 INFO  [7] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:35:47,089 145261 INFO  [6] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:36:04,010 162182 INFO  [7] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:37:36,529 254701 INFO  [5] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:37:50,775 268947 INFO  [5] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:38:01,751 279923 INFO  [5] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:40:02,853 401026 INFO  [17] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:40:50,902 449074 INFO  [17] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:42:56,798 574970 INFO  [17] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-16 23:46:26,649    199 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-16 23:46:26.647
+[MANH] 2023-04-16 23:46:33,184   6734 INFO  [8] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage

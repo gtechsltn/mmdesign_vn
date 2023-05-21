@@ -1,0 +1,493 @@
+﻿@model Mmdesign.Models.ProjectModel
+
+@{
+    ViewBag.Title = "Sửa dự án";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"], input[type="radio"], input[type="checkbox"], textarea, select {
+        border: 1px solid #ced4da !important;
+    }
+
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: inherit;
+            display: block;
+        }
+</style>
+
+
+
+<script type="text/javascript">
+    function fileCheck(obj) {
+        var fileExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+        if ($.inArray($(obj).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+            alert("Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed.");
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    var app_base = '@Url.Content("~/")';
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            @using (Html.BeginForm("Upload", "Admin", FormMethod.Post, new { id = "my_form", enctype = "multipart/form-data", target = "form_target", style = "width:0;height:0;overflow:hidden" }))
+            {
+                <input name="file" type="file" onchange="$('#my_form').submit();this.value='';">
+            }
+
+            @using (Html.BeginForm("Edit", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h3 id="titleCreateOrUpdate">Sửa dự án</h3>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.Id)
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CategoryId, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.DropDownListFor(model => model.CategoryId, (IEnumerable<SelectListItem>)ViewBag.IdCategories, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Seo, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Seo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Seo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Keyword, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Keyword, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Keyword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ShortDesc, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.ShortDesc, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ShortDesc, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CreatedDate, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.CreatedDate, new { htmlAttributes = new { @readonly = "readonly", @class = "form-control datetimepicker" } })
+                            @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.IsActive)
+                                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>*@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Investor, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Investor, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Investor, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LandArea, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.LandArea, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.LandArea, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ConstructionArea, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.ConstructionArea, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.ConstructionArea, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.YearOfCompletion, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.YearOfCompletion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.YearOfCompletion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Architect, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Architect, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Architect, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Intro, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Intro, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Intro, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @* TinyMCE (AllowHtml) *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IntroContent, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextAreaFor(m => m.IntroContent, new { @class = "IntroContent" })
+                            @Html.ValidationMessageFor(model => model.IntroContent, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Intro1, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Intro1, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Intro1, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @* TinyMCE (AllowHtml) *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Intro1Content, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextAreaFor(m => m.Intro1Content, new { @class = "Intro1Content" })
+                            @Html.ValidationMessageFor(model => model.Intro1Content, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Intro2, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.Intro2, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Intro2, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @* TinyMCE (AllowHtml) *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Intro2Content, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextAreaFor(m => m.Intro2Content, new { @class = "Intro2Content" })
+                            @Html.ValidationMessageFor(model => model.Intro2Content, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Picture, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Picture, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    @* File Upload Picture *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Picture, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <span class="btn btn-default btn-file">
+                                Browse <input type="file" name="ImagePicture" id="ImagePicture" onchange="fileCheck(this);" />
+                            </span>
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Picture1, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Picture1, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Picture1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    @* File Upload Picture1 *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Picture1, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <span class="btn btn-default btn-file">
+                                Browse <input type="file" name="ImagePicture1" id="ImagePicture1" accept="image/*" onchange="fileCheck(this);" />
+                            </span>
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Picture2, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Picture2, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Picture2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    @* File Upload Picture2 *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Picture2, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <span class="btn btn-default btn-file">
+                                Browse <input type="file" name="ImagePicture2" id="ImagePicture2" accept="image/*" onchange="fileCheck(this);" />
+                            </span>
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Picture3, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Picture3, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Picture3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    @* File Upload Picture3 *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Picture3, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <span class="btn btn-default btn-file">
+                                Browse <input type="file" name="ImagePicture3" id="ImagePicture3" accept="image/*" onchange="fileCheck(this);" />
+                            </span>
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Picture4, htmlAttributes: new { @class = "control-label col-md-3" })
+                            <div class="col-md-9">
+                                @Html.EditorFor(model => model.Picture4, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Picture4, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+
+                    @* File Upload Picture4 *@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Picture4, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            <span class="btn btn-default btn-file">
+                                Browse <input type="file" name="ImagePicture4" id="ImagePicture4" accept="image/*" onchange="fileCheck(this);" />
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CategoryClasses, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.EditorFor(model => model.CategoryClasses, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CategoryClasses, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-9">
+                            <input type="submit" value="Lưu lại" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready($(function () {
+        tinymce.init({
+            selector: "textarea.IntroContent",
+            theme: "modern",
+            browser_spellcheck: true,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'save table contextmenu directionality emoticons template paste textcolor',
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink image code blockquote | print preview media fullpage | forecolor backcolor emoticons | formatselect',
+            remove_linebreaks: false,
+            relative_urls: false,
+            menubar: false,
+            toolbar_items_size: 'small',
+            content_css: app_base + "assets/css/tinymce.css",
+            height: 'auto',
+            nonbreaking_force_tab: true,
+            entity_encoding: "raw",
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            file_browser_callback: function (field_name, url, type, win) {
+                if (type == 'image') {
+                    $('#my_form input').click();
+                }
+            }
+        });
+
+        tinymce.init({
+            selector: "textarea.Intro1Content",
+            theme: "modern",
+            browser_spellcheck: true,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'save table contextmenu directionality emoticons template paste textcolor',
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink image code blockquote | print preview media fullpage | forecolor backcolor emoticons | formatselect',
+            remove_linebreaks: false,
+            relative_urls: false,
+            menubar: false,
+            toolbar_items_size: 'small',
+            content_css: app_base + "assets/css/tinymce.css",
+            height: 'auto',
+            nonbreaking_force_tab: true,
+            entity_encoding: "raw",
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            file_browser_callback: function (field_name, url, type, win) {
+                if (type == 'image') {
+                    $('#my_form input').click();
+                }
+            }
+        });
+
+        tinymce.init({
+            selector: "textarea.Intro2Content",
+            theme: "modern",
+            browser_spellcheck: true,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'save table contextmenu directionality emoticons template paste textcolor',
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink image code blockquote | print preview media fullpage | forecolor backcolor emoticons | formatselect',
+            remove_linebreaks: false,
+            relative_urls: false,
+            menubar: false,
+            toolbar_items_size: 'small',
+            content_css: app_base + "assets/css/tinymce.css",
+            height: 'auto',
+            nonbreaking_force_tab: true,
+            entity_encoding: "raw",
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            file_browser_callback: function (field_name, url, type, win) {
+                if (type == 'image') {
+                    $('#my_form input').click();
+                }
+            }
+        });
+
+        // Language strings
+        var buttonTitle = 'Title';
+        var buttonOk = 'Ok';
+        var buttonClose = 'Close';
+        var enterValidUrl = 'Enter Valid Url';
+        var selectFile = 'Select File';
+        var maxImageFileSize = 'Max File Size';
+        var onlyImages = 'Only Images';
+        var generalError = 'Generic Message';
+
+        var idProject = $('#Id').val();
+        if (idProject == 0) {
+            $('#titleCreateOrUpdate').html("Tạo mới dự án");
+        } else {
+            $('#titleCreateOrUpdate').html("Sửa dự án");
+        }
+
+    }));
+</script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".datetimepicker").each(function () {
+            $(this).datepicker({
+                dateFormat: 'dd/mm/yy',
+                controlType: 'select',
+                oneLine: true,
+                changeMonth: true,
+                changeYear: true,
+                months: [
+                    "Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"
+                ],
+                dayOfWeekShort: [
+                    "CN", "T2", "T3", "T4", "T5", "T6", "T7"
+                ],
+                dayOfWeek: [
+                    "Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"
+                ],
+                monthNamesShort: [
+                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+                ],
+                dayNamesMin: [
+                    "CN", "T2", "T3", "T4", "T5", "T6", "T7"
+                ]
+            });
+        });
+
+        var idProject = $('#Id').val();
+        if (idProject == 0) {
+            $('#Created').datepicker('setDate', 'today');
+        }
+    });
+</script>

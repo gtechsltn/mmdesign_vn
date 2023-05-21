@@ -1,0 +1,157 @@
+﻿@model Mmdesign.Models.ProjectViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var project = Model.Project;
+    var relatedProjects = Model.RelatedProjects;
+}
+
+<!-- CONTENT -->
+<!-- Intro Section -->
+<section class="inner-intro bg-img light-color overlay-before parallax-background">
+    <div class="container">
+        <div class="row title">
+            <div class="title_row">
+                <h1 data-title="Project Details"><span>Project Details</span></h1>
+                <div class="page-breadcrumb">
+                    <a href="@Url.Action("Index", "Home")">Trang chủ</a> / <span>Project Details</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Intro Section -->
+<!-- End Intro Section -->
+<div id="project-detail-section" class="padding pb-60 pt-xs-60">
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-12">
+                <div class="heading-box pb-30 ">
+                    <h2><span>Our</span> Project</h2>
+                    <span class="b-line l-left"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="project-details">
+                    <figure>
+                        <img src="@Url.Content($"~/{project.Picture}")" alt="">
+                    </figure>
+                    <div class="project-info col-sm-12 col-lg-4 ">
+                        <h3>Project Description</h3>
+                        <ul>
+                            <li>
+                                <strong>Tên dự án:</strong> @Html.Raw(project.Name)
+                            </li>
+                            <li>
+                                <strong>Chủ đầu tư:</strong> @Html.Raw(project.Investor)
+                            </li>
+                            <li>
+                                <strong>Địa chỉ:</strong> @Html.Raw(project.Address)
+                            </li>
+                            <li>
+                                <strong>Diện tích khu đất:</strong> @Html.Raw(project.LandArea2) m2
+                            </li>
+                            <li>
+                                <strong>Diện tích xây dựng:</strong> @Html.Raw(project.ConstructionArea2) m2
+                            </li>
+                            <li>
+                                <strong>Năm hoàn thành:</strong> @Html.Raw(project.YearOfCompletion)
+                            </li>
+                            <li>
+                                <strong>Kiến trúc sư:</strong> @Html.Raw(project.Architect)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-7 mt-30">
+                <div class="box-title mb-20">
+                    <h3>@Html.Raw(project.Intro)</h3>
+                </div>
+                <div class="text-content">
+                    @Html.Raw(project.IntroContent)
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-7 mt-40 mt-xs-15">
+                <div class="row">
+                    <div class="col-sm-6 mb-xs-30">
+                        <div class="box-title mb-20">
+                            <h4>@Html.Raw(project.Intro1)</h4>
+                        </div>
+                        <div class="text-content">
+                            @Html.Raw(project.Intro1Content)
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="box-title mb-20">
+                            <h4>@Html.Raw(project.Intro2)</h4>
+                        </div>
+                        <div class="text-content">
+                            @Html.Raw(project.Intro2Content)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-5 mt-40">
+                <ul class="project-gallery text-right">
+                    <li>
+                        <a href="@Url.Content($"~/{project.Picture1}")" class="fancylight" data-fancybox-group="light"><img src="@Url.Content($"~/{project.Picture1}")" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Content($"~/{project.Picture2}")" class="fancylight" data-fancybox-group="light"><img src="@Url.Content($"~/{project.Picture2}")" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Content($"~/{project.Picture3}")" class="fancylight" data-fancybox-group="light"><img src="@Url.Content($"~/{project.Picture3}")" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="@Url.Content($"~/{project.Picture4}")" class="fancylight" data-fancybox-group="light"><img src="@Url.Content($"~/{project.Picture4}")" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Related Project-->
+<div class="padding gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="heading-box pb-30 ">
+                    <h2><span>Related</span> Project</h2>
+                    <span class="b-line l-left"></span>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div id="related-project" class="nf-carousel-theme">
+                    @foreach (var relatedProject in relatedProjects)
+                    {
+                        <div class="project-item">
+                            <div class="about-block clearfix">
+                                <figure>
+                                    <a href="@Url.Action("Details", "Project", new { id = relatedProject.Id })"><img class="img-responsive" src="@Url.Content($"~/{relatedProject.Picture}")" alt="Photo"></a>
+                                </figure>
+                                <div class="text-box mt-25">
+                                    <div class="box-title mb-15">
+                                        <h3><a href="@Url.Action("Details", "Project", new { id = relatedProject.Id })">@Html.Raw(relatedProject.Title)</a></h3>
+                                    </div>
+                                    <div class="text-content">
+                                        <p>
+                                            @Html.Raw(relatedProject.ShortDesc)
+                                        </p>
+                                        <a href="@Url.Action("Details", "Project", new { id = relatedProject.Id })" class="btn-text mt-15">Xem Thêm</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Related Project-->

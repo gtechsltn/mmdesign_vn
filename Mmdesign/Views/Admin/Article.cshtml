@@ -1,0 +1,175 @@
+﻿@model Mmdesign.Models.ArticleModel
+
+@{
+    ViewBag.Title = "Create Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<script src="@Url.Content("~/assets/js/jquery-1.12.4.min.js")"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/tinymce.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/themes/modern/theme.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.6/plugins/contextmenu/plugin.min.js"></script>
+
+<section class="article">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <iframe id="form_target" name="form_target" style="display:none"></iframe>
+
+                @using (Html.BeginForm("Upload", "Admin", FormMethod.Post, new { id = "my_form", enctype = "multipart/form-data", target = "form_target", style = "width:0;height:0;overflow:hidden" }))
+                {
+                    <input name="file" type="file" onchange="$('#my_form').submit();this.value='';">
+                }
+
+                @using (Html.BeginForm("Article", "Admin", FormMethod.Post, new { id = "form", enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-horizontal">
+                        <div class="editor-label">
+                            @Html.LabelFor(m => m.Title)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(m => m.Title, new { @class = "title" })
+                            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "error" })
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(m => m.Slug)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextBoxFor(m => m.Slug, new { @class = "slug" })
+                            @Html.ValidationMessageFor(m => m.Slug, "", new { @class = "error" })
+                        </div>
+                        <div class="editor-label">
+                            @Html.LabelFor(m => m.Content)
+                        </div>
+                        <div class="editor-field">
+                            @Html.TextAreaFor(m => m.Content, new { @class = "rte" })
+                            @Html.ValidationMessageFor(m => m.Content, "", new { @class = "error" })
+                        </div>
+                        <div class="form-group">
+                            <div style="margin-top: 5px;">
+                                <input type="submit" id="btnSubmit" name="btnSubmit" value="Lưu bài viết" />
+                                &nbsp;
+                                <input type="button" id="btnGoto" name="btnGoto" value="Chuyển đến bài viết" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    var app_base = '@Url.Content("~/")';
+</script>
+
+<script>
+    function toSlug(s) {
+
+        let str = s || '';
+
+        // Chuyển hết sang chữ thường
+        str = str.toLowerCase();
+
+        // Xóa dấu
+        str = str
+            .normalize('NFD') // chuyển chuỗi sang unicode tổ hợp
+            .replace(/[\u0300-\u036f]/g, ''); // xóa các ký tự dấu sau khi tách tổ hợp
+
+        // Xóa dấu
+        str = str.replace(/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/g, 'a');
+        str = str.replace(/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/g, 'e');
+        str = str.replace(/(ì|í|ị|ỉ|ĩ)/g, 'i');
+        str = str.replace(/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/g, 'o');
+        str = str.replace(/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/g, 'u');
+        str = str.replace(/(ỳ|ý|ỵ|ỷ|ỹ)/g, 'y');
+        str = str.replace(/(đ)/g, 'd');
+
+        // Thay ký tự đĐ
+        str = str.replace(/[đĐ]/g, 'd');
+
+        // Xóa ký tự đặc biệt
+        str = str.replace(/([^0-9a-z-\s])/g, '');
+
+        // Xóa khoảng trắng thay bằng ký tự -
+        str = str.replace(/(\s+)/g, '-');
+
+        // Xóa ký tự - liên tiếp
+        str = str.replace(/-+/g, '-');
+
+        // Xóa phần dư - ở đầu & cuối
+        str = str.replace(/^-+|-+$/g, '');
+
+        // return
+        return str;
+    }
+
+    $(document).on('change', '#Title', function () {
+
+        let $in = $('#Title');
+        let $out = $('#Slug');
+
+        $out.val(toSlug($in.val()));
+    });
+
+</script>
+
+<script>
+
+    //GET: /Admin/Article
+    $(document).ready($(function () {
+        tinymce.init({
+            selector: "textarea.rte",
+            theme: "modern",
+            browser_spellcheck: true,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'save table contextmenu directionality emoticons template paste textcolor',
+            ],
+            toolbar1: 'insertfile undo redo | styleselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink image code blockquote | print preview media fullpage | forecolor backcolor emoticons | formatselect',
+            remove_linebreaks: false,
+            relative_urls: false,
+            menubar: false,
+            toolbar_items_size: 'small',
+            content_css: app_base + "assets/css/tinymce.css",
+            height: 'auto',
+            nonbreaking_force_tab: true,
+            entity_encoding: "raw",
+            image_advtab: true,
+            templates: [
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            file_browser_callback: function (field_name, url, type, win) {
+                if (type == 'image') {
+                    $('#my_form input').click();
+                }
+            }
+        });
+
+        // Language strings
+        var buttonTitle = 'Title';
+        var buttonOk = 'Ok';
+        var buttonClose = 'Close';
+        var enterValidUrl = 'Enter Valid Url';
+        var selectFile = 'Select File';
+        var maxImageFileSize = 'Max File Size';
+        var onlyImages = 'Only Images';
+        var generalError = 'Generic Message';
+
+    }));
+
+    $(document).on("click", '#btnGoto', function () {
+        var str = $('#Slug').val();
+        if (str) {
+            window.location.href = '../' + str + '/';
+        }
+    });
+</script>

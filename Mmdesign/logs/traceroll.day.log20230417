@@ -1,0 +1,14 @@
+[MANH] 2023-04-17 09:42:18,363    224 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-17 09:42:18.363
+[MANH] 2023-04-17 09:42:24,435   6297 INFO  [11] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 09:43:24,717  66578 INFO  [9] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 09:49:23,325 425186 INFO  [11] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 09:50:46,579 508440 INFO  [12] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 09:51:23,688 545550 INFO  [14] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 09:52:29,749 611610 INFO  [12] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 18:54:05,219    140 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-17 18:54:05.219
+[MANH] 2023-04-17 19:23:10,645 1745566 INFO  [46] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 19:27:08,326 1983247 INFO  [48] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 19:27:34,977 2009898 INFO  [48] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 19:28:07,802 2042723 INFO  [41] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage
+[MANH] 2023-04-17 19:28:55,615    119 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-17 19:28:55.614
+[MANH] 2023-04-17 19:28:59,546   4051 INFO  [10] Mmdesign.Controllers.CategoryController.Manage() - Category->Manage

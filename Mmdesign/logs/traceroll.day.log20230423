@@ -1,0 +1,70 @@
+[MANH] 2023-04-23 00:26:03,896    152 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 00:26:03.894
+[MANH] 2023-04-23 00:27:28,792    110 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 00:27:28.792
+[MANH] 2023-04-23 00:34:41,507     56 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 00:34:41.506
+[MANH] 2023-04-23 00:36:48,474    124 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 00:36:48.473
+[MANH] 2023-04-23 00:38:33,273    129 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 00:38:33.272
+[MANH] 2023-04-23 00:57:05,660    129 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 00:57:05.659
+[MANH] 2023-04-23 01:00:52,078     60 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:00:52.077
+[MANH] 2023-04-23 01:01:19,292  27274 ERROR [7] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A public action method 'Manager' was not found on controller 'Mmdesign.Controllers.ProjectController'.
+   at System.Web.Mvc.Controller.HandleUnknownAction(String actionName)
+   at System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+[MANH] 2023-04-23 01:04:52,668     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:04:52.667
+[MANH] 2023-04-23 01:05:42,266     61 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:05:42.265
+[MANH] 2023-04-23 01:06:44,373     55 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:06:44.372
+[MANH] 2023-04-23 01:10:22,320     65 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:10:22.319
+[MANH] 2023-04-23 01:11:30,344    117 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:11:30.343
+[MANH] 2023-04-23 01:17:02,488     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:17:02.487
+[MANH] 2023-04-23 01:23:52,341     68 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:23:52.340
+[MANH] 2023-04-23 01:24:48,953     62 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:24:48.951
+[MANH] 2023-04-23 01:25:38,304     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:25:38.303
+[MANH] 2023-04-23 01:37:18,776     63 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 01:37:18.775
+[MANH] 2023-04-23 18:09:40,704     78 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 18:09:40.689
+[MANH] 2023-04-23 18:09:45,627   5001 ERROR [9] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 18:11:54,968    130 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 18:11:54.967
+[MANH] 2023-04-23 18:11:58,703   3865 ERROR [7] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 18:13:08,636    125 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 18:13:08.635
+[MANH] 2023-04-23 18:13:11,974   3463 ERROR [15] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 18:13:12,527   4016 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 18:13:12,561   4050 ERROR [10] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 18:13:12,595   4084 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 20:51:27,342    130 INFO  [1] Mmdesign.MvcApplication.Application_Start() - Application_Start  started at: 2023-04-23 20:51:27.342
+[MANH] 2023-04-23 20:51:30,812   3600 ERROR [8] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 20:51:31,868   4656 ERROR [6] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 20:51:32,885   5672 ERROR [7] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+[MANH] 2023-04-23 20:51:33,902   6690 ERROR [8] Mmdesign.MvcApplication.Application_Error() - System.Web.HttpException (0x80004005): A potentially dangerous Request.Path value was detected from the client (:).
+   at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)

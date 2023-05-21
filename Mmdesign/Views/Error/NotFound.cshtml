@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Not Found";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="@Url.Content("~/assets/css/ionicons.css")" rel="stylesheet" />
+
+<!-- Intro Section -->
+<section class="inner-intro bg-img light-color overlay-before parallax-background">
+    <div class="container">
+        <div class="row title">
+            <div class="title_row">
+                <h1 data-title="404 page"><span>404 page</span></h1>
+                <div class="page-breadcrumb">
+                    <a href="@Url.Action("Index", "Home")">Trang chủ</a> / <span>404 page</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Intro Section End-->
+<!-- CONTENT -->
+<div class="page-404 ptb-80 ptb-xs-40">
+    <div class="container">
+        <!--Footer Info -->
+        <div class="row text-center">
+            <div class="col-md-6 col-lg-6 offset-md-3">
+                <strong class="big-font">4<i class="ion-android-happy"></i>4</strong>
+                <h2>Không tìm thấy trang</h2>
+                <p>Trang bạn đang tìm không tồn tại</p>
+                <a href="@Url.Action("Index", "Home")" class="btn-text mt-15">Quay lại Trang chủ</a>
+            </div>
+        </div>
+    </div>
+</div>
+

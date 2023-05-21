@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    string adminUser = "bạn";
+    if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        CustomPrincipal identity = HttpContext.Current.User as CustomPrincipal;
+        if (identity != null)
+        {
+            adminUser = identity.UserName;
+        }
+    }
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ul>
+                <li><a href="@Url.Action("Manage", "Menu")">Menu</a></li>
+                <li><a href="@Url.Action("Manage", "Category")">Category</a></li>
+                <li><a href="@Url.Action("Manage", "Project")">Project</a></li>
+                <li><a href="@Url.Action("Article", "Admin")">Article</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <div style="border: solid 1px red;"></div>
+        </div>
+    </div>
+</div>
+

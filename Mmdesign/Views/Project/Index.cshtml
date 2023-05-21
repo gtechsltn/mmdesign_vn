@@ -1,0 +1,74 @@
+﻿@model Mmdesign.Models.ProjectViewModel
+@{
+    ViewBag.Title = "Dự án";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- CONTENT -->
+<!-- Intro Section -->
+<section class="inner-intro bg-img light-color overlay-before parallax-background">
+    <div class="container">
+        <div class="row title">
+            <div class="title_row">
+                <h1 data-title="Project"><span>Dự án</span></h1>
+                <div class="page-breadcrumb">
+                    <a href="@Url.Action("Index", "Home")">Trang chủ</a> / <span>Dự án</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Intro Section -->
+<!-- Work Section -->
+<section id="work" class="padding ptb-xs-40">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-6 offset-lg-3 mb-30">
+                <div class="heading-box">
+                    <h2><span>Dự </span> án</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Work Filter -->
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <ul class="container-filter categories-filter">
+                    <li>
+                        <a class="categories active" data-filter="*">All</a>
+                    </li>
+                    @foreach (var categoryClass in Model.AllCategoryClasses)
+                    {
+                        <li>
+                            <a class="categories" data-filter=".@categoryClass.ToLowerInvariant()">@Html.Raw(categoryClass)</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <!-- End Work Filter -->
+        <div class="row container-grid nf-col-3">
+            @foreach (var project in Model.TopListProjects)
+            {
+                <div class="nf-item @project.CategoryClasses">
+                    <div class="item-box">
+                        <a> <img alt="1" src="@Url.Content($"~/{project.Picture}")" class="item-container"> </a>
+                        <div class="link-zoom">
+                            <a href="@Url.Action("Details", "Project", new { id = project.Id })" class="project_links"> <i class="fa fa-link"> </i> </a>
+                            <a href="@Url.Content("~/assets/images/project/project1.jpg")" class="fancylight" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                        </div>
+                        <div class="gallery-heading">
+                            <h4><a href="@Url.Action("Details", "Project", new { id = project.Id })">@Html.Raw(project.Seo)</a></h4>
+                            <p>
+                                @Html.Raw(project.Keyword)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- End Work Section -->

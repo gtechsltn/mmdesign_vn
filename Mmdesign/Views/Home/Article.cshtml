@@ -1,0 +1,18 @@
+﻿@model Mmdesign.Models.Article
+
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Article Section start-->
+<section class="article">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @Html.Raw(WebUtility.HtmlDecode(Model.Content))
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Article Section end-->

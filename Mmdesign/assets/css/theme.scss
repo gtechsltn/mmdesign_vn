@@ -1,0 +1,76 @@
+﻿
+$primary-color: #19b5fe;// Change here your theme color
+$secondry-color: #19b5fe;// Change here your theme color
+
+
+/*
+============== background Color====================
+*/
+.btn-text,
+.single_plan__block.blue__block::before,
+.blue__block .plan-content-box,
+.single_plan__block::after,
+.plan-content-box h3::after,
+.container-filter li a.active, 
+.container-filter li a:hover,
+.link-zoom a,
+.quote_wrap__block,
+.quote__block,
+.quote__block::after,
+.owl-dots .owl-dot.active,
+.tparrows.tp-leftarrow:hover, 
+.tparrows.tp-rightarrow:hover,
+.accordion-box-2 .accordion.open .accordion-title,
+div .secondary_bg,
+.bottom-section,
+.main-menu__block ul li a.custom_btn__block,
+.about-section__block:before,
+.counter-section__box .counter:after,
+.plan-content-box h3:after
+{
+	background: $theme-color;
+}
+.a{
+	background:darken($theme-color,10%)
+}
+#footer-widgets .widget.widget_socials .socials a:hover:before{
+	background-color: $theme-color;
+	border-color: $theme-color;
+}
+
+#footer-widgets .widget .widget-title > span::after{
+	background-color:$theme-color;
+}		
+/*
+============== Text Color====================
+*/	
+.color,.top-info__block li i,
+.main-banner .banner-text h2 span,
+.btn-text,
+h2 span,
+.more_btn__block,
+.single_quote__block i.fa,
+.years__no-block span,
+.hi-icon,
+.event__date,
+.event__month{
+	color: $theme-color;
+}	
+.widget-tag li a{
+	color: $theme-color;
+}		
+/*
+============== Border Color====================
+*/
+.btn-text,
+.tparrows.tp-leftarrow:hover, .tparrows.tp-rightarrow:hover{
+	border-color:$theme-color;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* Inner Page ||---------------------------- */
+/*-------------------------------------------------------------------------------------------*/ 
+.dark-bg{
+  background: $theme-color;
+} 
+ 

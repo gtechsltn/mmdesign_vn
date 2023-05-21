@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa dự án</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Lỗi rồi:</p>
+            @if (ViewBag.Error != null)
+            {
+                <text>@ViewBag.Error</text>
+            }
+        </div>
+    </div>
+</div>
